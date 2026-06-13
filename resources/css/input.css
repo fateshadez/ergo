@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .dark-gradient {
+    background-image: conic-gradient(
+      from 151deg,
+      #020617 0%,
+      rgba(100, 116, 139, 0.22) 50%,
+      #020617 92%
+    );
+    background-color: #030712;
+  }
+  .text-shadow {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .filter-active {
+    right: 0px !important;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 transparent;
+}
