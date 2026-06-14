@@ -67,7 +67,7 @@ class Auth extends Controller
   {
     session_unset();
     session_destroy();
-    header('Location: /auth/register');
+    header('Location: /auth/login');
     exit();
   }
 }
