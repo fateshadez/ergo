@@ -43,15 +43,15 @@ class App
       $url = ['auth'];
     }
 
-    if ($url === ['auth'] || $url === ['auth', 'register']) {
+    if (in_array($url[0], ['auth'])) {
       if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
         header('Location: /home');
         exit();
       }
     }
+
     return $url;
   }
-
   private function show404()
   {
     http_response_code(404);
