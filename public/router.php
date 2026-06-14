@@ -8,4 +8,8 @@ if (is_file($file)) {
 
 // Pass the URL to index.php
 $_GET['url'] = ltrim($path, '/');
+
+error_log('URL path: ' . $path);
+error_log('GET url: ' . $_GET['url']);
+
 require_once __DIR__ . '/index.php';
