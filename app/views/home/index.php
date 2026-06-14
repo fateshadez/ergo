@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/app.css">
   <script src="https://kit.fontawesome.com/7efba6ae0b.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/leaf-icon.svg">
   <title>Task App</title>
 </head>
 
