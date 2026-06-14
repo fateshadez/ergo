@@ -4,6 +4,6 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./resources/css/input.css -o ./public/css/app.css",
-    "start": "echo 'PHP app'"
+    "start": "php -S 0.0.0.0:$PORT -t public"
   }
 }
