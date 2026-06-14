@@ -11,5 +11,5 @@ try {
 } catch (Exception $e) {
     http_response_code(500);
     echo $e->getMessage();
-    // require_once '../app/views/errors/500.php';
+    echo $e->getFile() . ' on line ' . $e->getLine();
 }
