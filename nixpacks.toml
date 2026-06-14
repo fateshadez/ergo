@@ -1,5 +1,8 @@
+[phases.setup]
+nixPkgs = ["php", "php83Extensions.mysqli", "nodejs_20"]
+
 [phases.build]
 cmds = ["npx tailwindcss -i ./resources/css/input.css -o ./public/css/app.css"]
 
 [start]
-cmd = "php -S 0.0.0.0:$PORT -t public"
+cmd = "php -S 0.0.0.0:$PORT -t public public/router.php"
