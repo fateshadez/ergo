@@ -9,15 +9,15 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/task-app/public/css/app.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="https://kit.fontawesome.com/7efba6ae0b.js" crossorigin="anonymous"></script>
   <title>Task App</title>
 </head>
 
 <body class="font-inter transition duration-300 ease h-full bg-white dark:bg-slate-950 overflow-hidden">
 
-  <script src="/task-app/public/js/color-theme.js" defer></script>
-  <script src="/task-app/public/js/tasks.js" defer></script>
+  <script src="/js/color-theme.js" defer></script>
+  <script src="/js/tasks.js" defer></script>
 
   <!-- Sidebar -->
   <div class="flex bg-gray-100 dark:bg-slate-950 overflow-hidden h-screen">
@@ -191,7 +191,7 @@
 
       <div
         class="flex w-full bg-white dark:bg-slate-900 justify-end px-4 py-3 border-t border-gray-200 dark:border-gray-800">
-        <a href="/task-app/auth/logout"
+        <a href="/auth/logout"
           class="px-6 py-3 text-lg bg-blue-600 font-semibold text-white shadow-sm hover:bg-blue-500">
           Logout
         </a>
@@ -211,7 +211,7 @@
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
-        <form id="create-task-form" action="/task-app/tasks/create" method="post" class="flex flex-col gap-4">
+        <form id="create-task-form" action="/tasks/create" method="post" class="flex flex-col gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Title</label>
             <input type="text" name="title"

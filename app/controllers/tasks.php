@@ -47,7 +47,7 @@ class Tasks extends Controller
         $dueDate,
         $_SESSION['user_id']
       );
-      header('Location: /task-app/home/index');
+      header('Location: /home/index');
       exit();
     }
   }
@@ -74,7 +74,7 @@ class Tasks extends Controller
         'priority' => $_POST['priority'],
         'due_date' => $dueDate
       ]);
-      header('Location: /task-app/home/index');
+      header('Location: /home/index');
       exit();
     }
   }

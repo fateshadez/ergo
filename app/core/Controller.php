@@ -21,7 +21,7 @@ class Controller
   protected function requireAuth()
   {
     if (!$this->isLoggedIn()) {
-      header('Location: /task-app/auth/register');
+      header('Location: /auth/register');
       exit();
     }
   }
@@ -29,7 +29,7 @@ class Controller
   protected function requireGuest()
   {
     if ($this->isLoggedIn()) {
-      header('Location: /task-app/home/index');
+      header('Location: /home/index');
       exit();
     }
   }

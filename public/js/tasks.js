@@ -61,7 +61,7 @@ createTaskBtns.forEach((btn) => {
 
     document.getElementById("modal-title").textContent = "Create task";
     document.getElementById("create-task-form").action =
-      "/task-app/tasks/create";
+      "/tasks/create";
     document.querySelector(
       "#create-task-form button[type='submit']",
     ).textContent = "Create";
@@ -122,7 +122,7 @@ document.getElementById("delete-selected").addEventListener("click", () => {
   const selected = [...document.querySelectorAll(".task-checkbox:checked")];
   const ids = selected.map((cb) => cb.dataset.id);
 
-  fetch("/task-app/tasks/delete", {
+  fetch("/tasks/delete", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ids }),
@@ -133,7 +133,7 @@ document.getElementById("complete-selected").addEventListener("click", () => {
   const selected = [...document.querySelectorAll(".task-checkbox:checked")];
   const ids = selected.map((cb) => cb.dataset.id);
 
-  fetch("/task-app/tasks/complete", {
+  fetch("/tasks/complete", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ids }),
@@ -214,7 +214,7 @@ if (editSelectedBtn) {
     }
 
     document.getElementById("create-task-form").action =
-      `/task-app/tasks/edit/${tile.dataset.id}`;
+      `/tasks/edit/${tile.dataset.id}`;
     document.querySelector(
       "#create-task-form button[type='submit']",
     ).textContent = "Save";

@@ -22,11 +22,11 @@ class Auth extends Controller
       $result = $this->user->register($email, $password, $confirm_password);
       if (!$result) {
         $_SESSION['errors'] = ErrorLog::get();
-        header('Location: /task-app/auth/register');
+        header('Location: /auth/register');
         exit();
       } else {
         session_regenerate_id(true);
-        header('Location: /task-app/auth/login');
+        header('Location: /auth/login');
         exit();
       }
     } else {
@@ -46,14 +46,14 @@ class Auth extends Controller
 
       if (!$result) {
         $_SESSION['errors'] = ErrorLog::get();
-        header('Location: /task-app/auth/login');
+        header('Location: /auth/login');
         exit();
       }
 
       session_regenerate_id(true);
       $_SESSION['user_id'] = $result;
       $_SESSION['logged_in'] = true;
-      header('Location: /task-app/home/index');
+      header('Location: /home/index');
       exit();
 
     } else {
@@ -67,7 +67,7 @@ class Auth extends Controller
   {
     session_unset();
     session_destroy();
-    header('Location: /task-app/auth/register');
+    header('Location: /auth/register');
     exit();
   }
 }

@@ -5,15 +5,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/task-app/public/css/app.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="https://kit.fontawesome.com/7efba6ae0b.js" crossorigin="anonymous"></script>
   <title>Sign In</title>
 </head>
 
 <body class="font-inter h-full bg-white dark:bg-slate-950">
 
-  <script src="/task-app/public/js/main.js" defer></script>
-  <script src="/task-app/public/js/color-theme.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/color-theme.js" defer></script>
 
   <button id="dark-mode"
     class="fixed top-3.5 right-5 cursor-pointer text-2xl bg-transparent hover:transition duration-300 ease-in-out hover:rotate-180 hover:scale-120">
@@ -39,7 +39,7 @@
         Sign in</h3>
     </div>
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form id="form" name="sign-in-form" action="/task-app/auth/login" method="post" class="space-y-6">
+      <form id="form" name="sign-in-form" action="/auth/login" method="post" class="space-y-6">
         <div>
           <label for="email" class="block text-sm/6 font-medium text-gray-900 dark:text-gray-100">Email:</label>
           <div class="mt-2">
@@ -84,12 +84,12 @@
         </div>
 
         <?php if (isset($errors['not_registered'])): ?>
-          <p class="text-red-500 text-sm !mt-2"><?= $errors['not_registered'] ?></p>
+          <p class="text-red-500 text-sm !mt-2 text-center"><?= $errors['not_registered'] ?></p>
         <?php endif; ?>
       </form>
 
       <p class="mt-10 text-center text-sm/6 text-gray-500 dark:text-gray-400">Don't have an account?
-        <a href="/task-app/auth/register"
+        <a href="/auth/register"
           class="font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Sign
           Up.</a>
       </p>
