@@ -43,11 +43,9 @@ class App
       $url = ['auth'];
     }
 
-    error_log('Parsed URL: ' . print_r($url, true));
-    error_log('Controller file exists: ' . (file_exists(__DIR__ . '/../controllers/' . $url[0] . '.php') ? 'yes' : 'no'));
-
     if (in_array($url[0], ['auth'])) {
-      if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+      $method = $url[1] ?? 'index';
+      if ($method !== 'logout' && isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
         header('Location: /home');
         exit();
       }
