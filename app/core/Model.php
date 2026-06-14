@@ -16,7 +16,7 @@ class Model
   }
   public function connect()
   {
-    $this->conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $this->conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, (int) DB_PORT);
     return $this->conn ? true : false;
   }
 
