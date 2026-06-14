@@ -21,7 +21,7 @@ class Controller
   protected function requireAuth()
   {
     if (!$this->isLoggedIn()) {
-      header('Location: /auth/register');
+      header('Location: /auth/login');
       exit();
     }
   }
@@ -29,7 +29,7 @@ class Controller
   protected function requireGuest()
   {
     if ($this->isLoggedIn()) {
-      header('Location: /home/index');
+      header('Location: /home');
       exit();
     }
   }
