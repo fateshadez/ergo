@@ -4,6 +4,12 @@ error_reporting(E_ALL);
 
 chdir(dirname(__DIR__));
 
+echo 'HOST: ' . getenv('MYSQLHOST') . '<br>';
+echo 'PORT: ' . getenv('MYSQLPORT') . '<br>';
+echo 'USER: ' . getenv('MYSQLUSER') . '<br>';
+echo 'DB: ' . getenv('MYSQLDATABASE') . '<br>';
+die();
+
 require_once 'app/init.php';
 
 try {
