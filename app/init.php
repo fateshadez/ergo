@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require_once 'config/database.php';
-require_once 'core/App.php';
-require_once 'core/Controller.php';
-require_once 'core/Model.php';
-require_once 'core/Error.php';
+require_once __DIR__ . '/config/database.php';
+require_once __DIR__ . '/core/FormError.php';
+require_once __DIR__ . '/core/Model.php';
+require_once __DIR__ . '/core/Controller.php';
+require_once __DIR__ . '/core/App.php';
