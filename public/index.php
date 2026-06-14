@@ -1,8 +1,11 @@
 <?php
 ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once '../app/init.php';
+
+chdir(dirname(__DIR__));
+
+require_once 'app/init.php';
+
 try {
     $app = new App();
 } catch (Exception $e) {
