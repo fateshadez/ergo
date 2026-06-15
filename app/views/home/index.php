@@ -154,14 +154,14 @@
                       <p class="text-sm text-gray-500 dark:text-gray-400"><?= htmlspecialchars($task['desc']) ?></p>
                     <?php endif; ?>
                     <div class="flex gap-4 mt-1 text-xs text-gray-400 dark:text-gray-500">
-                      <span><i class="fa-solid fa-calendar-plus mr-1 text-blue-600"></i><?= $task['created_at'] ?></span>
+                      <span><i class="fa-solid fa-calendar-plus mr-1 text-blue-600"></i><?= Helper::toLocalTime($task['created_at']) ?></span>
                       <?php if (!empty($task['due_date'])): ?>
                         <?php if ($task['status'] === 'OVERDUE'): ?>
-                          <span><i class="fa-solid fa-calendar-xmark mr-1 text-red-900"></i><?= $task['due_date'] ?></span>
+                          <span><i class="fa-solid fa-calendar-xmark mr-1 text-red-900"></i><?= Helper::toLocalTime($task['due_date']) ?></span>
                         <?php elseif ($task['status'] === 'PENDING'): ?>
-                          <span><i class="fa-solid fa-clock mr-1 text-orange-600"></i><?= $task['due_date'] ?></span>
+                          <span><i class="fa-solid fa-clock mr-1 text-orange-600"></i><?= Helper::toLocalTime($task['due_date']) ?></span>
                         <?php else: ?>
-                          <span><i class="fa-solid fa-calendar-check mr-1 text-green-900"></i><?= $task['due_date'] ?></span>
+                          <span><i class="fa-solid fa-calendar-check mr-1 text-green-900"></i><?= Helper::toLocalTime($task['due_date']) ?></span>
                         <?php endif; ?>
                       <?php endif; ?>
                     </div>
