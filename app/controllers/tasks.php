@@ -31,6 +31,10 @@ class Tasks extends Controller
       if (!empty($_POST['due_date'])) {
         $time = $_POST['due_time'] ?? '00:00';
         $dueDate = $_POST['due_date'] . ' ' . $time . ':00';
+        $localDate = $_POST['due_date'] . '' . $time . ':00';
+        $dt = new DateTime($localDate, new DateTimeZone('Europe/Kiev'));
+        $dt->setTimezone(new DateTimeZone('UTC'));
+        $dueDate = $dt->format('Y-m-d H:i:s');
       } else {
         $dueDate = null;
         if (!empty($_POST['due_date']) || !empty($_POST['due_time'])) {
@@ -59,6 +63,10 @@ class Tasks extends Controller
       if (!empty($_POST['due_date'])) {
         $time = $_POST['due_time'] ?? '00:00';
         $dueDate = $_POST['due_date'] . ' ' . $time . ':00';
+        $localDate = $_POST['due_date'] . '' . $time . ':00';
+        $dt = new DateTime($localDate, new DateTimeZone('Europe/Kiev'));
+        $dt->setTimezone(new DateTimeZone('UTC'));
+        $dueDate = $dt->format('Y-m-d H:i:s');
       } else {
         $dueDate = null;
         if (!empty($_POST['due_date']) || !empty($_POST['due_time'])) {
